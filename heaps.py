@@ -34,7 +34,7 @@ def max_heapify(a, n, i) :
     # Swapping in case of violations of the heap property
     if largest != i :
         a[i], a[largest] = a[largest], a[i]
-        max_heapify(a, heap_size, largest)
+        max_heapify(a, ne, largest)
         
     # A main function that calls max_heapify
     
@@ -44,7 +44,7 @@ def build_max_heap(a) :
     heap_size = len(a)
     
     for i in range(heap_size//2, 0, -1):
-        max_heapify(a, heap_size,i)
+        max_heapify(a, heap_size ,i)
         
 def main():
     # root is at index 1
