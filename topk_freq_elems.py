@@ -4,3 +4,6 @@
 # Max Heap approach
 
 # Create a max heap with the counts... and then... remove top node and re_heapify
+
+import max_heapify from heaps.py
+
