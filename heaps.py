@@ -49,7 +49,11 @@ def build_max_heap(a) :
     
 # Returns item from top of the tree and re organizes the heap    
 def pop(a) :
-    top = a.pop(0)
+    # Swapping the first and last items in the array
+    last = len(a) - 1
+    a[1], a[last] = a[last], a[1]
+    
+    top = a.pop(last)
     build_max_heap(a)
     return top
     
@@ -60,8 +64,15 @@ def main():
 
     a = [None, 0, 5, 20, 6, 12, 65, 1, 4, 9, 3, 89, 22, 25, 28, 10]
     build_max_heap(a)
+    print(f'Heap: {a[1:]}')
+    
+    top = pop(a)
+    print("Top element : ", top)
+    
+    
 
     # print heap starting with the root at index 1
+    # Shouldn't have 89 anymore
     print(f'Heap: {a[1:]}')
 
 
