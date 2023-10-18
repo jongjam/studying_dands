@@ -26,13 +26,13 @@ def quick_sort(nums, start, end) :
     if end <= start :
         return
     
-    pivot = partition(nums, start, end)
-    quick_sort(nums, start, pivot - 1)
+    pivot = partition(nums, start, end) # Finds the pivot position in the array
+    quick_sort(nums, start, pivot - 1) #
     quick_sort(nums, pivot + 1, end)
         
 
 def main() :
-    nums = [8, 2, 4, 7, 1, 3, 9, 6, 5]
+    nums = [2, 4, 1, 3]
     quick_sort(nums, 0, len(nums) - 1)
     print(nums)
     
