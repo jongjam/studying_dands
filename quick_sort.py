@@ -34,7 +34,7 @@ def partition(nums, start, end):
   
     
     for i in range(start, end) :
-        if nums[i] < nums[pivot] :
+        if nums[i] <= nums[pivot] :
             
             nums[p], nums[i] = nums[i], nums[p]
             p += 1
@@ -53,7 +53,7 @@ def quick_sort(nums, start, end) :
         
 
 def main() :
-    nums = [2, 4, 1, 3]
+    nums = [2, 4, 3, 1, 3]
     quick_sort(nums, 0, len(nums) - 1)
     print(nums)
     
