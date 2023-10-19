@@ -11,7 +11,7 @@ def partition(nums, start, end):
     # the values at i and j swap
     j = start
     
-    while j <= end :
+    while j < end :
         if nums[j] < nums[pivot] :
             i += 1
             nums[j], nums[i] = nums[i], nums[j]
